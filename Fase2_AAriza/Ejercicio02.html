@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ02 - FASE 2 - AAP</title>
+
+    <script>
+
+        //VARIABLES
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+
+        var day2 = new Date("12/25/2021");
+
+        //VARIABLE DIFERENCIA CON OPERACION PARA CALCULAR LOS DIAS RESTANTES
+        var difference= Math.abs(today-day2);
+        days = difference/(1000 * 3600 * 24)
+
+        document.write("¡AÚN QUEDA " + Math.round(days) + " DÍAS PARA NAVIDAD!");
+
+        
+    </script>
+
+
+
+</head>
+
+
+<body>
+    
+
+
+
+</body>
+</html>
