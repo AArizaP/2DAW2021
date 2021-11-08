@@ -1,0 +1,55 @@
+<script>
+
+    class Calculadora {
+
+            constructor(x1, x2) {
+                this.x1 = x1;
+                this.x2 = x2;
+                this.resultado = null;
+            }
+
+            
+            
+            sumar() {
+                this.resultado = this.x1 + this.x2;
+                document.write(`Suma ${this.x1} + ${this.x2} = `);
+                this.imprimir();
+            }
+
+            restar() {
+                this.resultado = this.x1 - this.x2;
+                document.write(`Resta ${this.x1} - ${this.x2} = `);
+                this.imprimir();
+            }
+
+            multiplicar() {
+                this.resultado = this.x1 * this.x2;
+                document.write(`Multiplicar ${this.x1} x ${this.x2} = `);
+                this.imprimir();
+            }
+
+            dividir() {
+                this.resultado = this.x1 / this.x2;
+                document.write(`Dividir ${this.x1} / ${this.x2} = `);
+                this.imprimir();
+            }
+
+            imprimir() {
+                document.write(this.resultado + '<br>');
+            }
+        }
+
+
+        const calculadora1 = new Calculadora(25, 50);
+        
+
+</script>
+<body>
+
+    <button onclick="calculadora1.sumar()"> SUMA <br></button>
+    <button onclick="calculadora1.restar()"> RESTA <br></button>
+    <button onclick="calculadora1.multiplicar()"> MULTIPLICACIÓN <br></button>
+    <button onclick="calculadora1.dividir()"> DIVISION <br></button>
+
+</body>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script>
+
+
+class Aeropuerto {
+    constructor(nombre, ciudad, nVuelos) {
+    this.nombre = nombre;
+    this.ciudad = ciudad;
+    this.vuelos = new Array();
+        
+        for (let i = 0; i < nVuelos; i++) {
+            this.vuelos[i] = new Vuelo1(i, "07.00 H", "09.00 H");
+        }
+    }
+
+    cambiarLLegada(n, newHora) {
+        this.vuelos[(newHora)];
+    }
+
+    cambiarSalida(n, newHora) {
+        this.vuelos[n].cambiarSalida(newHora);
+    }
+
+    compMSalida(n) {
+        alert(this.vuelos[n].compMSalida());
+    }
+}
+
+
+class Vuelo1 {
+    constructor(codigo, horaSalida, horaLLegada) {
+    this.codigo = codigo;
+    this.horaSalida = horaSalida;
+    this.horaLLegada = horaLLegada;
+    }
+
+    cambiarHoraSalida(newHora) {
+        this.horaSalida = newHora;
+    }
+
+    compMSalida() {
+        let llegada = this.horaLLegada;
+        let salida = this.horaSalida;
+
+        let hllegada = parseInt(llegada[0]);
+        let mllegada = parseInt(llegada[1]);
+
+        let hsalida = parseInt(salida[0]);
+        let msalida = parseInt(salida[1]);
+
+            if (hllegada > hsalida) {
+                return true;
+            } else if (hllegada > hsalida) {
+                return mllegada > msalida;
+            }
+    }
+
+
+}
+
+
+var aereoport = new Aeropuerto("Barajas", "Madrid", 5);
+aereoport.compMSalida(1);
+aereoport.cambiarHoraSalida(1, "21.00 H");
+
+
+        </script>
+    </head>
+    <body>
+	</body>
+</html>
