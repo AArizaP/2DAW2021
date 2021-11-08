@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ07 - FASE 2 - AAP</title>
+
+    <script>
+    
+        
+        
+        function file_extension(filename){
+            return (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename)[0] : undefined;
+        }
+        
+   
+        
+        var extension = file_extension('ArchivoPrueba.json');
+        
+        alert("La extensión del archivo es: " + extension);
+        
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

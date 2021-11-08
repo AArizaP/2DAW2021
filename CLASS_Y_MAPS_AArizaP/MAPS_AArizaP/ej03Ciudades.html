@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Ejemplo de JavaScript</title>
+        <meta charset="UTF-8">
+
+        <script>
+
+            const ciudades = new Map([
+                
+                ["Cádiz", 116.979],
+                ["Puerto de Santa Maria", 88.365],
+                ["Jerez de la Frontera", 212.879],
+                ["Conil", 98.643],
+                ["Chiclana", 74.195],
+                ["Chipiona", 34.385],
+                ["Puerto Real", 41.652]
+            
+            ]);
+
+            
+    function verCiudades() {
+
+        for(let [clave, valor] of ciudades){
+            document.write(clave + " → " + valor + " habitantes.")
+            document.write("<br>")
+        }
+
+}
+    
+
+
+    function numCiudades() {
+
+        document.write((ciudades.size) + " ciudades diferentes.");
+       
+    }
+
+
+    function borrarCiudad() {
+
+        let ciudadEliminada;
+            
+        ciudadEliminada = prompt('Introduce la ciudad a eliminar: ');
+
+        if (ciudades.delete(ciudadEliminada )) {
+
+            document.write("Se ha eliminado correctamente.") 
+        }
+        
+        else {
+            document.write("No se ha eliminado correctamente. Puede que el nombre introducido no exista.")
+        }
+    }
+
+
+    function anadirCiudades() {
+
+        let ciudadAnadida;
+            ciudadAnadida = prompt('Introduce la ciudad que deseas añadir: ');
+        
+        let habitantesAnadidos;
+            habitantesAnadidos = prompt('Introduce número de habitantes: ');
+        
+
+            ciudades.set(ciudadAnadida, habitantesAnadidos)
+
+            document.write(`Ciudad: ${ciudadAnadida} → Habitantes: ${ciudades.get(ciudadAnadida)}`)
+    }
+
+    
+
+        </script>
+
+
+    </head>
+
+    <body>
+        
+   
+
+            <input type="button" onclick="verCiudades()" value="Ver todas las ciudades"/>
+
+            <input type="button" onclick="numCiudades()" value="Numero de ciudades"/>
+
+            <input type="button" onclick="borrarCiudad()" value="Borrar ciudad"/>
+
+            <input type="button" onclick="anadirCiudades()" value="Añadir ciudad"/>
+
+
+    
+    </body>
+
+</html>
